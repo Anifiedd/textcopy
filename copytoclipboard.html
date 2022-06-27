@@ -1,0 +1,18 @@
+<head>
+  <script>
+  function myFunction() {
+    var copyText = document.getElementById("myInput");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    window.close();
+  }
+  </script>
+</head>
+
+
+<body>
+<input style=display:none; type="text" value="Host: [@user] | Code: [CODES] | DLC: <Yes/No> | Custom Songs: <Yes/No> | Play Style: <Competitive/Casual> | Other: (Description/additional info)" id="myInput">
+<button onclick=myFunction()>Copy Text</button>
+<p>Host: [@user] | Code: [CODES] | DLC: &lt;Yes/No> | Custom Songs: &lt;Yes/No> | Play Style: &lt;Competitive/Casual> | Other: (Description/additional info)</p>
+</body>
